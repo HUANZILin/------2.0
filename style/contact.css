@@ -1,0 +1,141 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  background-color: #fcfaf2;
+  padding: 2vw;
+}
+header .btn_back {
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #216a48;
+  border-radius: 20px;
+  padding-top: 5px;
+  transition: all 0.25s ease;
+}
+header .btn_back a {
+  display: flex;
+  text-decoration: none;
+  color: #fcfaf2;
+  font-size: larger;
+  font-weight: bold;
+}
+header .btn_back img {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  padding: 0.1rem 0.1rem;
+}
+header .btn_back:hover {
+  transform: scale(1.05);
+}
+
+main {
+  display: flex;
+  background-color: #fcfaf2;
+  padding-bottom: 50px;
+}
+main section.left {
+  flex: 1 1 600px;
+  padding-top: 50px;
+}
+main section.left form {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+main section.left form div {
+  padding: 2vh 0vh;
+}
+main section.left form div label {
+  color: #cd8b02;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+main section.left form div input,
+main section.left form div textarea {
+  width: 25vw;
+  background-color: rgba(205, 139, 2, 0.29);
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.25rem;
+  border: none;
+  padding: 0.5rem;
+}
+main section.left form div input {
+  height: 40px;
+}
+main section.left form div textarea {
+  height: 30vh;
+  vertical-align: top;
+}
+main section.left form button {
+  width: 150px;
+  height: 50px;
+  background-color: #216a48;
+  color: #fcfaf2;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+main section.left form button:hover {
+  transform: scale(1.05);
+}
+main section.right {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  padding-left: 10vw;
+  padding-bottom: 20px;
+}
+main section.right h4,
+main section.right p {
+  color: #cd8b02;
+}
+main section.right h4 {
+  font-size: larger;
+}
+main section.right p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+footer {
+  height: 20vh;
+  display: block;
+  background-image: url("../picture/restaurant.jpg");
+  background-size: cover;
+  background-position: 25%;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 625px) {
+  main {
+    flex-direction: column;
+  }
+  main section.left form {
+    padding-right: 20vw;
+  }
+  main section.left form div input,
+main section.left form div textarea {
+    width: 40vw;
+  }
+  main section.right {
+    flex: 1 1 100px;
+    padding-right: 20vw;
+  }
+}/*# sourceMappingURL=contact.css.map */

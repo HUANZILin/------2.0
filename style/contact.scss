@@ -1,0 +1,146 @@
+$themeColor_w: white;
+$themeColor_o: #cd8b02;
+$themeColor_b: #fcfaf2;
+$themeColor_g: #216a48;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+header {
+  background-color: $themeColor_b;
+  padding: 2vw;
+  .btn_back {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $themeColor_g;
+    border-radius: 20px;
+    padding-top: 5px;
+    transition: all 0.25s ease;
+    a {
+      display: flex;
+      text-decoration: none;
+      color: $themeColor_b;
+      font-size: larger;
+      font-weight: bold;
+    }
+    img {
+      width: 25px;
+      height: 25px;
+      display: flex;
+      padding: 0.1rem 0.1rem;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+main {
+  display: flex;
+  background-color: $themeColor_b;
+  padding-bottom: 50px;
+  section.left {
+    flex: 1 1 600px;
+    padding-top: 50px;
+    form {
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      div {
+        padding: 2vh 0vh;
+        label {
+          color: $themeColor_o;
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin-right: 10px;
+        }
+        input,
+        textarea {
+          width: 25vw;
+          background-color: rgba(205, 139, 2, 0.29);
+          color: rgba(0, 0, 0, 0.7);
+          font-size: 1.25rem;
+          border: none;
+          padding: 0.5rem;
+        }
+        input {
+          height: 40px;
+        }
+        textarea {
+          height: 30vh;
+          vertical-align: top;
+        }
+      }
+      button {
+        width: 150px;
+        height: 50px;
+        background-color: $themeColor_g;
+        color: $themeColor_b;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  section.right {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding-left: 10vw;
+    padding-bottom: 20px;
+    h4,
+    p {
+      color: $themeColor_o;
+    }
+    h4 {
+      font-size: larger;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+  }
+}
+footer {
+  height: 20vh;
+  display: block;
+  background-image: url("../picture/restaurant.jpg");
+  background-size: cover;
+  background-position: 25%;
+  opacity: 0.8;
+}
+@media screen and (max-width: 625px) {
+  main {
+    flex-direction: column;
+    section.left {
+      form {
+        padding-right: 20vw;
+        div {
+          input,
+          textarea {
+            width: 40vw;
+          }
+        }
+      }
+    }
+    section.right {
+      flex: 1 1 100px;
+      padding-right: 20vw;
+    }
+  }
+}

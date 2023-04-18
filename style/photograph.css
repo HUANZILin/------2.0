@@ -1,0 +1,162 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+#top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  font-size: 20px;
+  background-color: #216a48;
+  color: #fcfaf2;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+nav {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #fcfaf2;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding-left: 1rem;
+}
+nav ul li {
+  display: flex;
+}
+nav ul li img {
+  width: 42px;
+  height: 42px;
+  padding: 0.3rem 0.3rem;
+}
+nav ul li a {
+  display: flex;
+  align-items: center;
+  color: #cd8b02;
+  font-size: larger;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.25s ease;
+}
+
+header {
+  background-image: url("../picture/tree.jpg");
+  background-size: cover;
+  background-position: 25%;
+  color: white;
+  font-size: large;
+  padding: 3rem 5rem;
+}
+
+main {
+  background-color: #fcfaf2;
+}
+main section {
+  display: flex;
+}
+main section.top {
+  padding: 30px 50px;
+}
+main section.top button {
+  width: 100px;
+  height: 40px;
+  background-color: #216a48;
+  color: #fcfaf2;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+main section.middle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px 50px;
+}
+main section.middle img {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+}
+main section.bottom {
+  display: flex;
+  justify-content: center;
+  padding: 30px 50px;
+}
+main section.bottom button {
+  width: 150px;
+  height: 50px;
+  background-color: #216a48;
+  color: #fcfaf2;
+  border: none;
+  border-radius: 6px;
+  font-size: 24px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #cd8b02;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+footer ul li {
+  width: 15vw;
+  display: flex;
+  flex-basis: content;
+  align-items: center;
+  padding-left: 5px;
+}
+footer ul li img {
+  width: 2vw;
+  height: 2vw;
+  margin: 0px 10px;
+}
+footer ul li a {
+  display: flex;
+  align-items: center;
+  color: #fcfaf2;
+  font-size: larger;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+}
+footer ul li a.btn {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex-basis: content;
+  background-color: #fcfaf2;
+  color: #cd8b02;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.25rem 0.75rem;
+  transition: all 0.25s ease;
+}
+footer ul li a.btn:hover {
+  transform: scale(1.05);
+}
+
+#logo_fall {
+  width: 10%;
+  display: flex;
+  margin-left: 1.5rem;
+}/*# sourceMappingURL=photograph.css.map */

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="SEO描述" />
+    <meta name="keywords" content="關鍵字" />
+    <meta name="author" content="作者" />
+    <link rel="shortcut icon" href="./logo/logo_fall.png" />
+    <link rel="bookmark" href="./logo/logo_fall.png" />
+    <link rel="stylesheet" href="./style/diary.css" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <title>赴日交換日記 | 日記</title>
+  </head>
+
+  <body>
+    <div id="target"></div>
+    <button id="top">TOP</button>
+    <script>
+      top.onclick = function () {
+        target.scrollIntoView();
+        target.scrollIntoView(false);
+      };
+    </script>
+
+    <!-- 導覽列 -->
+    <nav>
+      <ul>
+        <li>
+          <a href="./index.html"
+            ><img
+              id="index_logo"
+              src="./logo/index_logo.png"
+              alt="..."
+            />首頁</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              id="diary_logo"
+              src="./logo/diary_logo.png"
+              alt="..."
+            />日記</a
+          >
+        </li>
+        <li>
+          <a href="./resource.html"
+            ><img
+              id="resource_logo"
+              src="./logo/resource_logo.png"
+              alt="..."
+            />資源</a
+          >
+        </li>
+        <li>
+          <a href="./photograph.html"
+            ><img
+              id="photograph_logo"
+              src="./logo/photograph_logo.png"
+              alt="..."
+            />相簿</a
+          >
+        </li>
+        <li id="login"><a href="./login.html">登入</a></li>
+      </ul>
+    </nav>
+
+    <!-- 標題 -->
+    <header>
+      <h1>赴日交換日記</h1>
+      <h3>在東京一學期的驚險生活(?)</h3>
+    </header>
+
+    <!-- 主要內容 -->
+    <main>
+      <section class="left">
+        <h3 class="bright">西元年/月</h3>
+        <h3 class="dark">2023/02</h3>
+        <h3 class="bright">2023/01</h3>
+        <h3 class="dark">2022/12</h3>
+        <h3 class="bright">2022/11</h3>
+        <h3 class="dark">2022/10</h3>
+        <h3 class="bright">2022/09</h3>
+      </section>
+
+      <section class="middle">
+        <div class="pic">
+          <div class="img_container">
+            <img src="./picture/yourname.jpg" class="card-img-top" alt="..." />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">【行前篇】申請交換的動機&需要準備的文件</h4>
+            <hr />
+            <p class="card-text">2022/09/01</p>
+            <a href="./article.html" class="btn">閱讀全文</a>
+          </div>
+        </div>
+        <div class="pic">
+          <div class="img_container">
+            <img src="./picture/mountain.jpg" class="card-img-top" alt="..." />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">【行前篇】選擇交換校系的考量&注意事項</h4>
+            <hr />
+            <p class="card-text">2022/09/02</p>
+            <a href="./article.html" class="btn">閱讀全文</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="right">
+        <div class="img_container">
+          <img src="..." alt="" />
+          <!-- src="./picture/author.jpg" -->
+        </div>
+        <h4>作者--林O容</h4>
+        <p>
+          於方格子(Vocus)寫作平台發表觀影、讀後心得，曾不間斷持續寫作半年，發布30多篇文章。<br />寫作題材不限，從美食實境秀到恐怖片，對舞台劇也有涉獵，將來會繼續開闢不同的創作領域，期望能成為出色的文字耕耘者。
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <img
+        id="logo_fall"
+        src="./logo/logo_fall.png"
+        alt="..."
+        title="日本交換日記"
+      />
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/karen.lin.huan.zi/"
+            ><img src="./logo/fb.png" alt="..." title="Facebook個人頁面" />
+            Facebook</a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/karenlin0709/"
+            ><img
+              src="./logo/ig.png"
+              alt="..."
+              title="Instagram個人頁面"
+            />Instagram</a
+          >
+        </li>
+        <li><a href="#">karen901208@gmail.com</a></li>
+        <li><a href="./contact.html" class="btn">Contact</a></li>
+      </ul>
+    </footer>
+  </body>
+  <script src="./app.js"></script>
+</html>

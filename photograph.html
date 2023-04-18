@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="SEO描述" />
+    <meta name="keywords" content="關鍵字" />
+    <meta name="author" content="作者" />
+    <link rel="shortcut icon" href="./logo/logo_fall.png" />
+    <link rel="bookmark" href="./logo/logo_fall.png" />
+    <link rel="stylesheet" href="./style/photograph.css" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <title>赴日交換日記 | 相簿</title>
+  </head>
+
+  <body>
+    <div id="target"></div>
+    <button id="top">TOP</button>
+    <script>
+      top.onclick = function () {
+        target.scrollIntoView();
+        target.scrollIntoView(false);
+      };
+    </script>
+
+    <!-- 導覽列 -->
+    <nav>
+      <ul>
+        <li>
+          <a href="./index.html"
+            ><img
+              id="index_logo"
+              src="./logo/index_logo.png"
+              alt="..."
+            />首頁</a
+          >
+        </li>
+        <li>
+          <a href="./diary.html"
+            ><img
+              id="diary_logo"
+              src="./logo/diary_logo.png"
+              alt="..."
+            />日記</a
+          >
+        </li>
+        <li>
+          <a href="./resource.html"
+            ><img
+              id="resource_logo"
+              src="./logo/resource_logo.png"
+              alt="..."
+            />資源</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              id="photograph_logo"
+              src="./logo/photograph_logo.png"
+              alt="..."
+            />相簿</a
+          >
+        </li>
+        <li id="login"><a href="./login.html">登入</a></li>
+      </ul>
+    </nav>
+
+    <!-- 標題 -->
+    <header>
+      <h1>赴日交換日記</h1>
+      <h3>在東京一學期的驚險生活(?)</h3>
+    </header>
+
+    <main>
+      <section class="top">
+        <button>全部</button>
+        <button>學校</button>
+        <button>生活</button>
+        <button>旅遊</button>
+      </section>
+
+      <section class="middle">
+        <img src="./picture/tree.jpg" alt="..." />
+        <img src="./picture/city.jpg" alt="..." />
+        <img src="./picture/mountain.jpg" alt="..." />
+        <img src="./picture/restaurant.jpg" alt="..." />
+        <img src="./picture/summer.jpg" alt="..." />
+        <img src="./picture/yourname.jpg" alt="..." />
+      </section>
+
+      <section class="bottom">
+        <button>Load More</button>
+      </section>
+    </main>
+
+    <footer>
+      <img
+        id="logo_fall"
+        src="./logo/logo_fall.png"
+        alt="..."
+        title="日本交換日記"
+      />
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/karen.lin.huan.zi/"
+            ><img src="./logo/fb.png" alt="..." title="Facebook個人頁面" />
+            Facebook</a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/karenlin0709/"
+            ><img
+              src="./logo/ig.png"
+              alt="..."
+              title="Instagram個人頁面"
+            />Instagram</a
+          >
+        </li>
+        <li><a href="#">karen901208@gmail.com</a></li>
+        <li><a href="./contact.html" class="btn">Contact</a></li>
+      </ul>
+    </footer>
+  </body>
+  <script src="./app.js"></script>
+</html>
