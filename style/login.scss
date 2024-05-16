@@ -8,6 +8,7 @@ $themeColor_g: #216a48;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 #top {
   position: fixed;
@@ -29,6 +30,7 @@ nav {
   background-color: $themeColor_b;
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-left: 1rem;
     li {
@@ -66,26 +68,27 @@ main {
 section {
   width: 100%;
   height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background-color: $themeColor_b;
+  overflow: hidden;
   .mark {
     position: absolute;
-    top: 40vh;
-    left: 23%;
     color: rgba(0, 0, 0, 0.1);
-    font-size: 18vw;
+    font-size: 200px;
     font-weight: 100;
   }
   .namecard {
-    width: 480px;
+    width: 70%;
+    max-width: 480px;
     height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 72%;
-    transform: translate(-50%, -50%);
+    position: relative;
     background-color: $themeColor_w;
     color: rgba(0, 0, 0, 0.7);
     letter-spacing: 1px;
@@ -105,6 +108,11 @@ section {
       flex-direction: column;
       label {
         padding: 10px 0px;
+      }
+      input {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 2px 5px;
       }
       button {
         width: 100px;
@@ -138,10 +146,10 @@ section {
     background-color: $themeColor_o;
   }
   .circle2 {
-    width: 80px;
-    height: 80px;
-    right: 430px;
-    top: -30px;
+    width: 160px;
+    height: 160px;
+    right: 400px;
+    top: -70px;
     border: solid 3px $themeColor_o;
   }
 }
@@ -160,15 +168,15 @@ footer {
       align-items: center;
       padding-left: 5px;
       img {
-        width: 2vw;
-        height: 2vw;
+        width: 16px;
+        height: 16px;
         margin: 0px 10px;
       }
       a {
         display: flex;
         align-items: center;
         color: $themeColor_b;
-        font-size: larger;
+        font-size: 16px;
         font-weight: 500;
         text-decoration: none;
         padding: 0.25rem 0.75rem;
@@ -187,6 +195,8 @@ footer {
   text-decoration: none;
   border-radius: 10px;
   padding: 0.25rem 0.75rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
   transition: all 0.25s ease;
   &:hover {
     transform: scale(1.05);
@@ -194,6 +204,28 @@ footer {
 }
 #logo_fall {
   width: 10%;
+  min-width: 100px;
   display: flex;
   margin-left: 1.5rem;
 }
+
+// @media (max-width: 495px) {
+//   main section .namecard {
+//     top: 83%;
+//   }
+// }
+// @media (max-width: 432px) {
+//   main section .namecard {
+//     top: 85%;
+//   }
+// }
+// @media (max-width: 415px) {
+//   main section .namecard {
+//     top: 90%;
+//   }
+// }
+// @media (max-width: 375px) {
+//   main section .namecard {
+//     top: 98%;
+//   }
+// }

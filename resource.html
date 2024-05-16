@@ -23,7 +23,8 @@
     <div id="target"></div>
     <button id="top">TOP</button>
     <script>
-      top.onclick = function () {
+      const topBtn = document.getElementById("top");
+      topBtn.onclick = function () {
         target.scrollIntoView();
         target.scrollIntoView(false);
       };
@@ -79,40 +80,53 @@
     </header>
 
     <main>
-      <section class="left">
-        <div><p>日文學習資源</p></div>
+      <section class="top">
+        <div class="left">
+          <div><p>日文學習資源</p></div>
+        </div>
+        <div class="right">
+          <table>
+            <tr>
+              <td>
+                <a
+                  href="https://www.sigure.tw/learn-japanese/basic/50/seion.php"
+                  target="_blank"
+                  >50音語法教學</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://tsunagarujp.bunka.go.jp/guide" target="_blank"
+                  >生活日語</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://jp.sonic-learning.com/" target="_blank"
+                  >音速日語線上教室</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.ewant.org/login/index.php" target="_blank"
+                  >初級日語會話</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.ewant.org/login/index.php" target="_blank"
+                  >中級日語會話</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
       </section>
-      <section class="right">
-        <table>
-          <tr>
-            <td>
-              <a href="https://www.sigure.tw/learn-japanese/basic/50/seion.php"
-                >50音語法教學</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="https://tsunagarujp.bunka.go.jp/guide">生活日語</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="https://jp.sonic-learning.com/">音速日語線上教室</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="https://www.ewant.org/login/index.php">初級日語會話</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="https://www.ewant.org/login/index.php">初級日語會話</a>
-            </td>
-          </tr>
-        </table>
-      </section>
+      <section class="bottom"><div>施工中</div></section>
     </main>
 
     <footer>

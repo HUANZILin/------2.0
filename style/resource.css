@@ -3,6 +3,7 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 
 #top {
@@ -20,7 +21,6 @@
 
 nav {
   width: 100%;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 3;
@@ -28,6 +28,7 @@ nav {
 }
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding-left: 1rem;
 }
@@ -59,18 +60,18 @@ header {
   padding: 3rem 5rem;
 }
 
-main {
+main section.top {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   background-color: #fcfaf2;
 }
-main section.left {
-  width: 50%;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  padding-left: 35%;
+main section.top .left {
+  padding: 30px;
 }
-main section.left div {
+main section.top .left div {
   width: 150px;
   height: 150px;
   display: flex;
@@ -80,37 +81,51 @@ main section.left div {
   justify-content: center;
   padding: 20px;
 }
-main section.left div p {
+main section.top .left div p {
   font-size: 24px;
   color: white;
   text-align: center;
 }
-main section.right {
-  width: 50%;
+main section.top .right {
   background-color: #fcfaf2;
   padding: 5% 0%;
 }
-main section.right table {
+main section.top .right table {
   border-left: 5px solid #216a48;
   padding-left: 15px;
 }
-main section.right table tr {
+main section.top .right table tr {
   font-size: 20px;
 }
-main section.right table tr td {
+main section.top .right table tr td {
   padding: 1rem;
 }
-main section.right table tr td a {
+main section.top .right table tr td a {
   background-color: #cd8b02;
   color: #fcfaf2;
   text-decoration: none;
   padding: 10px;
   transition: all 0.25s ease;
 }
-main section.right table tr td a:hover {
+main section.top .right table tr td a:hover {
   background-color: #fcfaf2;
   color: #cd8b02;
-  border: solid #cd8b02;
+}
+main section.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcfaf2;
+}
+main section.bottom div {
+  font-size: 24px;
+  color: #fcfaf2;
+  background-color: #707070;
+  padding: 10% 20%;
+  margin: 15% 0px;
+  outline: dashed;
+  outline-offset: 20px;
+  outline-color: #707070;
 }
 
 footer {
@@ -131,15 +146,15 @@ footer ul li {
   padding-left: 5px;
 }
 footer ul li img {
-  width: 2vw;
-  height: 2vw;
+  width: 16px;
+  height: 16px;
   margin: 0px 10px;
 }
 footer ul li a {
   display: flex;
   align-items: center;
   color: #fcfaf2;
-  font-size: larger;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   padding: 0.25rem 0.75rem;
@@ -156,6 +171,8 @@ footer ul li a {
   text-decoration: none;
   border-radius: 10px;
   padding: 0.25rem 0.75rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
   transition: all 0.25s ease;
 }
 .btn:hover {
@@ -164,6 +181,7 @@ footer ul li a {
 
 #logo_fall {
   width: 10%;
+  min-width: 100px;
   display: flex;
   margin-left: 1.5rem;
 }/*# sourceMappingURL=resource.css.map */

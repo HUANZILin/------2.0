@@ -21,7 +21,8 @@
     <div id="target"></div>
     <button id="top">TOP</button>
     <script>
-      top.onclick = function () {
+      const topBtn = document.getElementById("top");
+      topBtn.onclick = function () {
         target.scrollIntoView();
         target.scrollIntoView(false);
       };
@@ -29,7 +30,7 @@
 
     <header>
       <div class="btn_back">
-        <a href="./diary.html"><img src="./logo/back.svg" alt="" /> Back</a>
+        <a href="./diary.html"><img src="./logo/back.svg" alt="" />Back</a>
       </div>
     </header>
 

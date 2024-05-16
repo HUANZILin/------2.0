@@ -23,7 +23,8 @@
     <div id="target"></div>
     <button id="top">TOP</button>
     <script>
-      top.onclick = function () {
+      const topBtn = document.getElementById("top");
+      topBtn.onclick = function () {
         target.scrollIntoView();
         target.scrollIntoView(false);
       };
@@ -81,16 +82,6 @@
     <!-- 主要內容 -->
     <main>
       <section class="left">
-        <h3 class="bright">西元年/月</h3>
-        <h3 class="dark">2023/02</h3>
-        <h3 class="bright">2023/01</h3>
-        <h3 class="dark">2022/12</h3>
-        <h3 class="bright">2022/11</h3>
-        <h3 class="dark">2022/10</h3>
-        <h3 class="bright">2022/09</h3>
-      </section>
-
-      <section class="middle">
         <div class="pic">
           <div class="img_container">
             <img src="./picture/yourname.jpg" class="card-img-top" alt="..." />
@@ -116,11 +107,7 @@
       </section>
 
       <section class="right">
-        <div class="img_container">
-          <img src="..." alt="" />
-          <!-- src="./picture/author.jpg" -->
-        </div>
-        <h4>作者--林O容</h4>
+        <h4>作者--Huan Zi</h4>
         <p>
           於方格子(Vocus)寫作平台發表觀影、讀後心得，曾不間斷持續寫作半年，發布30多篇文章。<br />寫作題材不限，從美食實境秀到恐怖片，對舞台劇也有涉獵，將來會繼續開闢不同的創作領域，期望能成為出色的文字耕耘者。
         </p>

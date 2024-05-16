@@ -32,7 +32,9 @@ header .btn_back img {
   width: 25px;
   height: 25px;
   display: flex;
+  align-self: center;
   padding: 0.1rem 0.1rem;
+  margin-right: 10px;
 }
 header .btn_back:hover {
   transform: scale(1.05);
@@ -131,7 +133,7 @@ footer {
     padding-right: 20vw;
   }
   main section.left form div input,
-main section.left form div textarea {
+  main section.left form div textarea {
     width: 40vw;
   }
   main section.right {

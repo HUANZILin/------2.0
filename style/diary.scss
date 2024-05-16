@@ -8,6 +8,7 @@ $themeColor_g: #216a48;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 #top {
   position: fixed;
@@ -28,6 +29,7 @@ nav {
   background-color: $themeColor_b;
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-left: 1rem;
     li {
@@ -66,26 +68,6 @@ main {
     flex-direction: column;
     background-color: $themeColor_b;
     &.left {
-      flex: 1 1 200px;
-      position: sticky;
-      left: 0;
-      background-color: $themeColor_w;
-      h3 {
-        font-size: 28px;
-        text-align: center;
-        letter-spacing: 2px;
-        padding: 15px 0px;
-        &.dark {
-          background-color: $themeColor_o;
-          color: $themeColor_b;
-        }
-        &.bright {
-          color: $themeColor_o;
-        }
-      }
-    }
-    &.middle {
-      flex: 6 1 400px;
       align-items: center;
       padding-bottom: 3rem;
       .pic {
@@ -102,7 +84,7 @@ main {
       }
       .card-img-top {
         width: 100%;
-        object-fit: cover;
+        min-height: 40vh;
         transition: all 0.25s ease;
         &:hover {
           transform: scale(1.05);
@@ -139,6 +121,7 @@ main {
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
+        align-content: center;
         text-align: center;
         letter-spacing: 10px;
         border-radius: 0%;
@@ -148,22 +131,13 @@ main {
         &:hover {
           background-color: $themeColor_b;
           color: $themeColor_o;
-          border: solid $themeColor_o;
         }
       }
     }
     &.right {
-      flex: 1 1 200px;
       align-items: center;
       background-color: $themeColor_w;
       padding: 30px;
-      .img_container {
-        margin-bottom: 15px;
-        overflow: hidden;
-        img {
-          width: 100%;
-        }
-      }
       h4,
       p {
         color: rgba(0, 0, 0, 0.7);
@@ -197,40 +171,59 @@ footer {
       align-items: center;
       padding-left: 5px;
       img {
-        width: 2vw;
-        height: 2vw;
+        width: 16px;
+        height: 16px;
         margin: 0px 10px;
       }
       a {
         display: flex;
         align-items: center;
         color: $themeColor_b;
-        font-size: larger;
+        font-size: 16px;
         font-weight: 500;
         text-decoration: none;
         padding: 0.25rem 0.75rem;
-        &.btn {
-          width: 100px;
-          height: 40px;
-          display: flex;
-          flex-basis: content;
-          background-color: $themeColor_b;
-          color: $themeColor_o;
-          font-weight: 600;
-          text-decoration: none;
-          border-radius: 10px;
-          padding: 0.25rem 0.75rem;
-          transition: all 0.25s ease;
-          &:hover {
-            transform: scale(1.05);
-          }
-        }
       }
     }
   }
+  .btn {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    flex-basis: content;
+    background-color: $themeColor_b;
+    color: $themeColor_o;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 0.25rem 0.75rem;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: all 0.25s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  #logo_fall {
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    margin-left: 1.5rem;
+  }
 }
-#logo_fall {
-  width: 10%;
-  display: flex;
-  margin-left: 1.5rem;
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  main section.left .pic {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main section.left .pic {
+    width: 80%;
+  }
 }

@@ -8,6 +8,7 @@ $themeColor_g: #216a48;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 #top {
   position: fixed;
@@ -29,6 +30,7 @@ nav {
   background-color: $themeColor_b;
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-left: 1rem;
     li {
@@ -60,55 +62,71 @@ header {
   padding: 3rem 5rem;
 }
 main {
-  display: flex;
-  flex-direction: row;
-  background-color: $themeColor_b;
-  section.left {
-    width: 50%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 35%;
-    div {
-      width: 150px;
-      height: 150px;
-      display: flex;
-      background-color: $themeColor_g;
-      border-radius: 50%;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      p {
-        font-size: 24px;
-        color: $themeColor_w;
-        text-align: center;
+  section.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: $themeColor_b;
+    .left {
+      padding: 30px;
+      div {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        background-color: $themeColor_g;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        p {
+          font-size: 24px;
+          color: $themeColor_w;
+          text-align: center;
+        }
       }
     }
-  }
-  section.right {
-    width: 50%;
-    background-color: $themeColor_b;
-    padding: 5% 0%;
-    table {
-      border-left: 5px solid $themeColor_g;
-      padding-left: 15px;
-      tr {
-        font-size: 20px;
-        td {
-          padding: 1rem;
-          a {
-            background-color: $themeColor_o;
-            color: $themeColor_b;
-            text-decoration: none;
-            padding: 10px;
-            transition: all 0.25s ease;
-            &:hover {
-              background-color: $themeColor_b;
-              color: $themeColor_o;
-              border: solid $themeColor_o;
+    .right {
+      background-color: $themeColor_b;
+      padding: 5% 0%;
+      table {
+        border-left: 5px solid $themeColor_g;
+        padding-left: 15px;
+        tr {
+          font-size: 20px;
+          td {
+            padding: 1rem;
+            a {
+              background-color: $themeColor_o;
+              color: $themeColor_b;
+              text-decoration: none;
+              padding: 10px;
+              transition: all 0.25s ease;
+              &:hover {
+                background-color: $themeColor_b;
+                color: $themeColor_o;
+              }
             }
           }
         }
       }
+    }
+  }
+  section.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $themeColor_b;
+    div {
+      font-size: 24px;
+      color: $themeColor_b;
+      background-color: #707070;
+      padding: 10% 20%;
+      margin: 15% 0px;
+      outline: dashed;
+      outline-offset: 20px;
+      outline-color: #707070;
     }
   }
 }
@@ -127,15 +145,15 @@ footer {
       align-items: center;
       padding-left: 5px;
       img {
-        width: 2vw;
-        height: 2vw;
+        width: 16px;
+        height: 16px;
         margin: 0px 10px;
       }
       a {
         display: flex;
         align-items: center;
         color: $themeColor_b;
-        font-size: larger;
+        font-size: 16px;
         font-weight: 500;
         text-decoration: none;
         padding: 0.25rem 0.75rem;
@@ -154,6 +172,8 @@ footer {
   text-decoration: none;
   border-radius: 10px;
   padding: 0.25rem 0.75rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
   transition: all 0.25s ease;
   &:hover {
     transform: scale(1.05);
@@ -161,6 +181,7 @@ footer {
 }
 #logo_fall {
   width: 10%;
+  min-width: 100px;
   display: flex;
   margin-left: 1.5rem;
 }

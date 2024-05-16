@@ -8,6 +8,7 @@ $themeColor_g: #216a48;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 #top {
   position: fixed;
@@ -47,7 +48,9 @@ header {
       width: 25px;
       height: 25px;
       display: flex;
+      align-self: center;
       padding: 0.1rem 0.1rem;
+      margin-right: 10px;
     }
     &:hover {
       transform: scale(1.05);
@@ -117,17 +120,17 @@ section.right {
 @media screen and (max-width: 620px) {
   .photo_background {
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     bottom: 0;
-    z-index: 1.5;
   }
   section.left {
     width: 100%;
+    padding-bottom: 50vh;
   }
   section.right {
     img {
       width: 80%;
-      height: 30vh;
+      height: 50vh;
       bottom: 5vh;
       right: 10vw;
     }

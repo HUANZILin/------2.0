@@ -3,6 +3,7 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 
 #top {
@@ -20,7 +21,6 @@
 
 nav {
   width: 100%;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 3;
@@ -28,6 +28,7 @@ nav {
 }
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding-left: 1rem;
 }
@@ -125,20 +126,21 @@ footer ul li {
   padding-left: 5px;
 }
 footer ul li img {
-  width: 2vw;
-  height: 2vw;
+  width: 16px;
+  height: 16px;
   margin: 0px 10px;
 }
 footer ul li a {
   display: flex;
   align-items: center;
   color: #fcfaf2;
-  font-size: larger;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   padding: 0.25rem 0.75rem;
 }
-footer ul li a.btn {
+
+.btn {
   width: 100px;
   height: 40px;
   display: flex;
@@ -149,14 +151,17 @@ footer ul li a.btn {
   text-decoration: none;
   border-radius: 10px;
   padding: 0.25rem 0.75rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
   transition: all 0.25s ease;
 }
-footer ul li a.btn:hover {
+.btn:hover {
   transform: scale(1.05);
 }
 
 #logo_fall {
   width: 10%;
+  min-width: 100px;
   display: flex;
   margin-left: 1.5rem;
 }/*# sourceMappingURL=photograph.css.map */

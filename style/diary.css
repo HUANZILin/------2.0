@@ -3,6 +3,7 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 
 #top {
@@ -19,7 +20,6 @@
 
 nav {
   width: 100%;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 3;
@@ -27,6 +27,7 @@ nav {
 }
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding-left: 1rem;
 }
@@ -68,54 +69,31 @@ main section {
   background-color: #fcfaf2;
 }
 main section.left {
-  flex: 1 1 200px;
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  background-color: white;
-}
-main section.left h3 {
-  font-size: 28px;
-  text-align: center;
-  letter-spacing: 2px;
-  padding: 15px 0px;
-}
-main section.left h3.dark {
-  background-color: #cd8b02;
-  color: #fcfaf2;
-}
-main section.left h3.bright {
-  color: #cd8b02;
-}
-main section.middle {
-  flex: 6 1 400px;
   align-items: center;
   padding-bottom: 3rem;
 }
-main section.middle .pic {
+main section.left .pic {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
 }
-main section.middle .img_container {
+main section.left .img_container {
   height: 40vh;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
-main section.middle .card-img-top {
+main section.left .card-img-top {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  min-height: 40vh;
   transition: all 0.25s ease;
 }
-main section.middle .card-img-top:hover {
+main section.left .card-img-top:hover {
   transform: scale(1.05);
 }
-main section.middle .card-body {
+main section.left .card-body {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: white;
@@ -123,21 +101,21 @@ main section.middle .card-body {
   align-items: center;
   padding: 20px;
 }
-main section.middle .card-title {
+main section.left .card-title {
   color: #cd8b02;
   font-size: 28px;
   text-align: center;
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
-main section.middle .card-text {
+main section.left .card-text {
   color: rgba(0, 0, 0, 0.7);
   font-size: 20px;
   text-align: center;
   letter-spacing: 10px;
   margin: 15px;
 }
-main section.middle .btn {
+main section.left .btn {
   width: 100%;
   height: 20%;
   display: block;
@@ -146,6 +124,7 @@ main section.middle .btn {
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
+  align-content: center;
   text-align: center;
   letter-spacing: 10px;
   border-radius: 0%;
@@ -153,23 +132,14 @@ main section.middle .btn {
   margin-bottom: 15px;
   transition: all 0.25s ease;
 }
-main section.middle .btn:hover {
+main section.left .btn:hover {
   background-color: #fcfaf2;
   color: #cd8b02;
-  border: solid #cd8b02;
 }
 main section.right {
-  flex: 1 1 200px;
   align-items: center;
   background-color: white;
   padding: 30px;
-}
-main section.right .img_container {
-  margin-bottom: 15px;
-  overflow: hidden;
-}
-main section.right .img_container img {
-  width: 100%;
 }
 main section.right h4,
 main section.right p {
@@ -205,20 +175,20 @@ footer ul li {
   padding-left: 5px;
 }
 footer ul li img {
-  width: 2vw;
-  height: 2vw;
+  width: 16px;
+  height: 16px;
   margin: 0px 10px;
 }
 footer ul li a {
   display: flex;
   align-items: center;
   color: #fcfaf2;
-  font-size: larger;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   padding: 0.25rem 0.75rem;
 }
-footer ul li a.btn {
+footer .btn {
   width: 100px;
   height: 40px;
   display: flex;
@@ -229,14 +199,32 @@ footer ul li a.btn {
   text-decoration: none;
   border-radius: 10px;
   padding: 0.25rem 0.75rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
   transition: all 0.25s ease;
 }
-footer ul li a.btn:hover {
+footer .btn:hover {
   transform: scale(1.05);
 }
-
-#logo_fall {
+footer #logo_fall {
   width: 10%;
+  min-width: 100px;
   display: flex;
   margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  main section.left .pic {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main section.left .pic {
+    width: 80%;
+  }
 }/*# sourceMappingURL=diary.css.map */

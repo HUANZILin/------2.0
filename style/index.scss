@@ -8,6 +8,7 @@ $themeColor_g: #216a48;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 #top {
   position: fixed;
@@ -29,6 +30,7 @@ nav {
   background-color: $themeColor_b;
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-left: 1rem;
     li {
@@ -64,50 +66,55 @@ header {
   padding: 3rem 5rem;
 }
 section.top {
+  display: grid;
+  position: relative;
   width: 100%;
   background-color: $themeColor_b;
-  padding: 50px;
-  div {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    bottom: 55%;
-    left: 30%;
+  padding: 50px 50px 50px 17%;
+  overflow: hidden;
+  .circle1 {
+    padding: 25px;
+    justify-self: flex-start;
+    margin-left: -20px;
+    margin-bottom: -30px;
     background-color: $themeColor_g;
     border-radius: 50%;
   }
   p {
     position: relative;
-    text-align: center;
     color: $themeColor_o;
     font-size: 24px;
     letter-spacing: 2px;
   }
+  .circle2 {
+    padding: 80px;
+    justify-self: flex-end;
+    margin-bottom: -160px;
+    border: solid 3px $themeColor_g;
+    border-radius: 50%;
+  }
 }
 section.middle {
   width: 100%;
-  height: 50vh;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  padding: 30px;
   background-color: $themeColor_w;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2), 0px 15px 0px rgba(0, 0, 0, 0.2);
   h4 {
     display: flex;
-    flex: 3 1 200px;
     color: $themeColor_o;
     font-size: 28px;
-    justify-content: center;
   }
   iframe {
-    width: 100%;
-    height: 100%;
+    height: 50vh;
     display: flex;
     flex: 5 1 600px;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 30px;
+    padding: 30px;
   }
 }
 section.bottom {
@@ -116,16 +123,15 @@ section.bottom {
   padding: 10vh 10%;
   div.diary {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 50px;
     div.img {
-      width: 35%;
       height: 50vh;
       display: flex;
       border-radius: 50%;
       overflow: hidden;
-      box-shadow: 30px 0px $themeColor_g;
-      margin-left: 100px;
+      box-shadow: -30px 0px $themeColor_g;
       img {
         width: 100%;
         height: 100%;
@@ -135,16 +141,17 @@ section.bottom {
       display: flex;
       flex-direction: column;
       align-self: center;
+      padding: 20px 80px;
       h2 {
         font-size: 32px;
         color: $themeColor_o;
-        padding: 10px 100px;
+        padding: 10px 0px;
       }
       h5 {
         font-size: 24px;
         color: $themeColor_o;
         font-weight: unset;
-        padding: 10px 100px;
+        padding: 10px 0px;
       }
       a {
         width: 150px;
@@ -156,30 +163,28 @@ section.bottom {
         text-decoration: none;
         text-align: center;
         margin-top: 20px;
-        margin-left: 100px;
         padding: 5px;
         transition: all 0.25s ease;
         &:hover {
           background-color: $themeColor_b;
           color: $themeColor_o;
-          border: solid $themeColor_o;
         }
       }
     }
   }
   div.resource {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row-reverse;
     justify-content: center;
     margin-bottom: 50px;
     div.img {
-      width: 35%;
+      max-width: 280px;
       height: 50vh;
       display: flex;
       border-radius: 50%;
       overflow: hidden;
-      box-shadow: -30px 0px 0px $themeColor_g;
-      margin-right: 100px;
+      box-shadow: 30px 0px 0px $themeColor_g;
       img {
         width: 100%;
         height: 100%;
@@ -189,16 +194,17 @@ section.bottom {
       display: flex;
       flex-direction: column;
       align-self: center;
+      padding: 20px 80px;
       h2 {
         font-size: 32px;
         color: $themeColor_o;
-        padding: 10px 100px;
+        padding: 10px 0px;
       }
       h5 {
         font-size: 24px;
         color: $themeColor_o;
         font-weight: unset;
-        padding: 10px 100px;
+        padding: 10px 0px;
       }
       a {
         width: 150px;
@@ -210,28 +216,26 @@ section.bottom {
         text-decoration: none;
         text-align: center;
         margin-top: 20px;
-        margin-left: 100px;
         padding: 5px;
         transition: all 0.25s ease;
         &:hover {
           background-color: $themeColor_b;
           color: $themeColor_o;
-          border: solid $themeColor_o;
         }
       }
     }
   }
   div.photograph {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     div.img {
-      width: 35%;
+      max-width: 280px;
       height: 50vh;
       display: flex;
       border-radius: 50%;
       overflow: hidden;
-      box-shadow: 30px 0px $themeColor_g;
-      margin-left: 100px;
+      box-shadow: -30px 0px $themeColor_g;
       img {
         width: 100%;
         height: 100%;
@@ -241,16 +245,17 @@ section.bottom {
       display: flex;
       flex-direction: column;
       align-self: center;
+      padding: 20px 80px;
       h2 {
         font-size: 32px;
         color: $themeColor_o;
-        padding: 10px 100px;
+        padding: 10px 0px;
       }
       h5 {
         font-size: 24px;
         color: $themeColor_o;
         font-weight: unset;
-        padding: 10px 100px;
+        padding: 10px 0px;
       }
       a {
         width: 150px;
@@ -262,13 +267,11 @@ section.bottom {
         text-decoration: none;
         text-align: center;
         margin-top: 20px;
-        margin-left: 100px;
         padding: 5px;
         transition: all 0.25s ease;
         &:hover {
           background-color: $themeColor_b;
           color: $themeColor_o;
-          border: solid $themeColor_o;
         }
       }
     }
@@ -289,15 +292,15 @@ footer {
       align-items: center;
       padding-left: 5px;
       img {
-        width: 2vw;
-        height: 2vw;
+        width: 16px;
+        height: 16px;
         margin: 0px 10px;
       }
       a {
         display: flex;
         align-items: center;
         color: $themeColor_b;
-        font-size: larger;
+        font-size: 16px;
         font-weight: 500;
         text-decoration: none;
         padding: 0.25rem 0.75rem;
@@ -316,6 +319,8 @@ footer {
   text-decoration: none;
   border-radius: 10px;
   padding: 0.25rem 0.75rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
   transition: all 0.25s ease;
   &:hover {
     transform: scale(1.05);
@@ -323,6 +328,7 @@ footer {
 }
 #logo_fall {
   width: 10%;
+  min-width: 100px;
   display: flex;
   margin-left: 1.5rem;
 }

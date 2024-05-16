@@ -8,6 +8,7 @@ $themeColor_g: #216a48;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  scroll-behavior: smooth;
 }
 #top {
   position: fixed;
@@ -29,6 +30,7 @@ nav {
   background-color: $themeColor_b;
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding-left: 1rem;
     li {
@@ -121,40 +123,43 @@ footer {
       align-items: center;
       padding-left: 5px;
       img {
-        width: 2vw;
-        height: 2vw;
+        width: 16px;
+        height: 16px;
         margin: 0px 10px;
       }
       a {
         display: flex;
         align-items: center;
         color: $themeColor_b;
-        font-size: larger;
+        font-size: 16px;
         font-weight: 500;
         text-decoration: none;
         padding: 0.25rem 0.75rem;
-        &.btn {
-          width: 100px;
-          height: 40px;
-          display: flex;
-          flex-basis: content;
-          background-color: $themeColor_b;
-          color: $themeColor_o;
-          font-weight: 600;
-          text-decoration: none;
-          border-radius: 10px;
-          padding: 0.25rem 0.75rem;
-          transition: all 0.25s ease;
-          &:hover {
-            transform: scale(1.05);
-          }
-        }
       }
     }
   }
 }
+.btn {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex-basis: content;
+  background-color: $themeColor_b;
+  color: $themeColor_o;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.25rem 0.75rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: all 0.25s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 #logo_fall {
   width: 10%;
+  min-width: 100px;
   display: flex;
   margin-left: 1.5rem;
 }
